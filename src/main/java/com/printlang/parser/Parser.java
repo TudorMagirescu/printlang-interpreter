@@ -110,6 +110,14 @@ public class Parser {
             throw new ParserException("Expected `}` token.");
         }
 
+        // Check if a direct child of the `ScopeNode` is a `NumNode` or `IdNode`.
+        // In that case, throw an exception, since standalone numbers and identifier are not valid expressions.
+        for (AbstractNode child : children) {
+            if ((child instanceof NumNode) || (child instanceof IdNode)) {
+                throw new ParserException("Standalone numbers or identifiers are not valid expressions.");
+            }
+        }
+
         return new ScopeNode(children);
     }
 

@@ -130,4 +130,30 @@ public class ParserTest {
         });
     }
 
+    @Test
+    public void testStandaloneNumber() {
+        String inputString = """
+           x = 1
+           1
+        """;
+
+        assertThrows(ParserException.class, () -> {
+            Lexer lexer = buildLexer(inputString);
+            new Parser(lexer).parse();
+        });
+    }
+
+    @Test
+    public void testStandaloneIdentifier() {
+        String inputString = """
+           x = 1
+           x
+        """;
+
+        assertThrows(ParserException.class, () -> {
+            Lexer lexer = buildLexer(inputString);
+            new Parser(lexer).parse();
+        });
+    }
+
 }
