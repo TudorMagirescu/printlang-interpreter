@@ -17,7 +17,12 @@ public class TokenFactory {
             throw new LexerException("Numeric token " + s + " contains non-digit characters.");
         }
 
-        return new NumToken(Integer.parseInt(s));
+        try {
+            int val = Integer.parseInt(s);
+            return new NumToken(val);
+        } catch (NumberFormatException e) {
+            throw new LexerException("Numeric token exceeds the range of a 32-bit integer.");
+        }
     }
 
     private static IdToken createIdToken(String s) {

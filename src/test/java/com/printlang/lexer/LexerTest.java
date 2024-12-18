@@ -68,13 +68,18 @@ public class LexerTest {
             x = 1cv
         """;
 
-        String exceptionMessage = "Numeric token 1cv contains non-digit characters.";
         Lexer lexer = buildLexer(inputString);
+        assertThrows(LexerException.class, () -> { StreamSupport.stream(lexer.spliterator(), false).toList(); });
+    }
 
-        // Produces exception.
-        StreamSupport.stream(lexer.spliterator(), false);
+    @Test
+    public void testNumberExceedsIntBounds() {
+        String inputString = """
+            x = 1000000000000000
+        """;
 
-        assertThrows(LexerException.class, () -> { throw new LexerException(exceptionMessage); });
+        Lexer lexer = buildLexer(inputString);
+        assertThrows(LexerException.class, () -> { StreamSupport.stream(lexer.spliterator(), false).toList(); });
     }
 
     @Test
@@ -83,13 +88,8 @@ public class LexerTest {
             x = y.2
         """;
 
-        String exceptionMessage = "Id token y.2 is not valid.";
         Lexer lexer = buildLexer(inputString);
-
-        // Produces exception.
-        StreamSupport.stream(lexer.spliterator(), false);
-
-        assertThrows(LexerException.class, () -> { throw new LexerException(exceptionMessage); });
+        assertThrows(LexerException.class, () -> { StreamSupport.stream(lexer.spliterator(), false).toList(); });
     }
 
 }
