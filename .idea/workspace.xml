@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dd58c8a-cf0e-4ac5-947c-b43ba80985e5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/interpreter/Env.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/interpreter/Interpreter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/interpreter/InterpreterException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/printlang/interpreter/InterpreterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/output0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/output0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/printlang/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printlang/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/AssignmentNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/AssignmentNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/NumNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/NumNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/PrintNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/PrintNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/ScopeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/ScopeNode.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +64,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.ParserTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.printlang.Main" />
       <module name="printer-interpreter.main" />
@@ -68,7 +78,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LexerTest.testNumberExceedsIntBounds" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InterpreterTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -81,7 +91,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.printlang.lexer.LexerTest.testNumberExceedsIntBounds&quot;" />
+            <option value="&quot;com.printlang.interpreter.InterpreterTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -91,7 +101,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InterpreterTest.testAssignToSelf" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -104,7 +114,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.printlang.parser.ParserTest&quot;" />
+            <option value="&quot;com.printlang.interpreter.InterpreterTest.testAssignToSelf&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -114,7 +124,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParserTest.testStandaloneIdentifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InterpreterTest.testNestedScopes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -127,7 +137,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.printlang.parser.ParserTest.testStandaloneIdentifier&quot;" />
+            <option value="&quot;com.printlang.interpreter.InterpreterTest.testNestedScopes&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -137,7 +147,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParserTest.testStandaloneNumber" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="InterpreterTest.testPrintNullVariables" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,7 +160,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.printlang.parser.ParserTest.testStandaloneNumber&quot;" />
+            <option value="&quot;com.printlang.interpreter.InterpreterTest.testPrintNullVariables&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -162,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ParserTest" />
-        <item itemvalue="Gradle.ParserTest.testStandaloneIdentifier" />
-        <item itemvalue="Gradle.ParserTest.testStandaloneNumber" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.LexerTest.testNumberExceedsIntBounds" />
+        <item itemvalue="Gradle.InterpreterTest.testNestedScopes" />
+        <item itemvalue="Gradle.InterpreterTest.testAssignToSelf" />
+        <item itemvalue="Gradle.InterpreterTest.testPrintNullVariables" />
+        <item itemvalue="Gradle.InterpreterTest" />
       </list>
     </recent_temporary>
   </component>

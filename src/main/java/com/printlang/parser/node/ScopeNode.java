@@ -31,9 +31,10 @@ public class ScopeNode extends AbstractNode {
             sb.append(child.toFormattedString(depth + 1)).append("\n");
         }
 
-        // Remove last newline character from the string.
-        sb.deleteCharAt(sb.length() - 1);
-
         return sb.toString();
+    }
+
+    public List<AbstractNode> getChildren() {
+        return children;
     }
 }

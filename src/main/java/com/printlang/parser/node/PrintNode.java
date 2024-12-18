@@ -29,4 +29,8 @@ public class PrintNode extends AbstractNode {
                 + "PrintNode\n"
                 + arg.toFormattedString(depth + 1);
     }
+
+    public IdNode getArg() {
+        return arg;
+    }
 }

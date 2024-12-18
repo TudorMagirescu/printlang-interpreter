@@ -27,4 +27,8 @@ public class NumNode extends ExprNode {
     public String toFormattedString(int depth) {
         return indent(depth) + "NumNode(val=" + val + ")";
     }
+
+    public int getVal() {
+        return val;
+    }
 }

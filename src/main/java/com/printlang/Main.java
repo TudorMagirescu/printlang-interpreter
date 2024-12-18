@@ -1,5 +1,6 @@
 package com.printlang;
 
+import com.printlang.interpreter.Interpreter;
 import com.printlang.lexer.Lexer;
 import com.printlang.lexer.token.AbstractToken;
 import com.printlang.parser.Parser;
@@ -22,6 +23,9 @@ public class Main {
         Parser parser = new Parser(new Lexer(new FileInputStream("examples/input0.txt")));
         AbstractNode root = parser.parse();
         output.write(root.toFormattedString(0));
+
+        output.write("\nInterpreter output:\n");
+        (new Interpreter(root, output)).interpret();
 
         output.flush();
         output.close();

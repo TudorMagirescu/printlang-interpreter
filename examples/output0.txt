@@ -52,9 +52,20 @@ ScopeNode
 				IdNode(id=x)
 			PrintNode
 				IdNode(id=y)
+
 		PrintNode
 			IdNode(id=x)
 		PrintNode
 			IdNode(id=y)
+
 	PrintNode
 		IdNode(id=x)
+
+Interpreter output:
+1
+2
+3
+3
+2
+null
+1

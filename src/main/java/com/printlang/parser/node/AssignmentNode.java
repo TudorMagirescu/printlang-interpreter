@@ -32,4 +32,12 @@ public class AssignmentNode extends AbstractNode {
                 + "AssignmentNode(lhs=" + lhs + ")\n"
                 + rhs.toFormattedString(depth + 1);
     }
+
+    public String getLhs() {
+        return lhs;
+    }
+
+    public ExprNode getRhs() {
+        return rhs;
+    }
 }
