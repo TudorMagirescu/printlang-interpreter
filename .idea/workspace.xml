@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dd58c8a-cf0e-4ac5-947c-b43ba80985e5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/examples/input0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/output0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/Lexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/LexerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/AbstractToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/IdToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/IdTokenType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/NumToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/TokenFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/printlang/lexer/LexerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/ParserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/AbstractNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/AssignmentNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/ExprNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/IdNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/NumNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/PrintNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/printlang/parser/node/ScopeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/printlang/parser/ParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/output0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/output0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/printlang/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printlang/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/IdToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/IdToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/NumToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/printlang/lexer/token/NumToken.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,21 +68,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.LexerTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.printlang.Main" />
-      <module name="printer-interpreter.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.printlang.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LexerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ParserTest">
+    <configuration name="ParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -83,7 +82,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.printlang.lexer.LexerTest&quot;" />
+            <option value="&quot;com.printlang.parser.ParserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -93,7 +92,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.testInvalidIdToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParserTest.testEqualsTokenNotProceededByIdNode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -106,7 +105,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.printlang.lexer.LexerTest.testInvalidIdToken&quot;" />
+            <option value="&quot;com.printlang.parser.ParserTest.testEqualsTokenNotProceededByIdNode&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -116,7 +115,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.testInvalidNumToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParserTest.testLeftBracketNotPrecededByScopeToken" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -129,7 +128,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.printlang.lexer.LexerTest.testInvalidNumToken&quot;" />
+            <option value="&quot;com.printlang.parser.ParserTest.testLeftBracketNotPrecededByScopeToken&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -139,7 +138,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LexerTest.testSuccessfulTokenization" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParserTest.testPrintTokenNotFollowedByIdentifier" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -152,7 +151,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.printlang.lexer.LexerTest.testSuccessfulTokenization&quot;" />
+            <option value="&quot;com.printlang.parser.ParserTest.testPrintTokenNotFollowedByIdentifier&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ParserTest.testScopeTokenNotFollowedByLeftBracket" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.printlang.parser.ParserTest.testScopeTokenNotFollowedByLeftBracket&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -164,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LexerTest" />
-        <item itemvalue="Gradle.LexerTest.testInvalidIdToken" />
-        <item itemvalue="Gradle.LexerTest.testInvalidNumToken" />
-        <item itemvalue="Gradle.LexerTest.testSuccessfulTokenization" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.ParserTest" />
+        <item itemvalue="Gradle.ParserTest.testPrintTokenNotFollowedByIdentifier" />
+        <item itemvalue="Gradle.ParserTest.testLeftBracketNotPrecededByScopeToken" />
+        <item itemvalue="Gradle.ParserTest.testScopeTokenNotFollowedByLeftBracket" />
+        <item itemvalue="Gradle.ParserTest.testEqualsTokenNotProceededByIdNode" />
       </list>
     </recent_temporary>
   </component>

@@ -1,3 +1,4 @@
+Lexer output:
 IdToken(id='x',type=USER_DEFINED)
 IdToken(id='=',type=EQUALS)
 NumToken(val='1')
@@ -30,3 +31,34 @@ IdToken(id='y',type=USER_DEFINED)
 IdToken(id='}',type=RIGHT_BRACKET)
 IdToken(id='print',type=PRINT)
 IdToken(id='x',type=USER_DEFINED)
+
+Parser output:
+ScopeNode
+	AssignmentNode
+		IdNode(id=x)
+		NumNode(val=1)
+	PrintNode
+		IdNode(id=x)
+	ScopeNode
+		AssignmentNode
+			IdNode(id=x)
+			NumNode(val=2)
+		PrintNode
+			IdNode(id=x)
+		ScopeNode
+			AssignmentNode
+				IdNode(id=x)
+				NumNode(val=3)
+			AssignmentNode
+				IdNode(id=y)
+				IdNode(id=x)
+			PrintNode
+				IdNode(id=x)
+			PrintNode
+				IdNode(id=y)
+		PrintNode
+			IdNode(id=x)
+		PrintNode
+			IdNode(id=y)
+	PrintNode
+		IdNode(id=x)

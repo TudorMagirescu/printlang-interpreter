@@ -1,12 +1,11 @@
-package com.printlang.lexer.token;
+package com.printlang.parser.node;
 
 import java.util.Objects;
 
-public class NumToken extends AbstractToken {
-
+public class NumNode extends ExprNode {
     private final int val;
 
-    public NumToken(int val) {
+    public NumNode(int val) {
         this.val = val;
     }
 
@@ -15,8 +14,8 @@ public class NumToken extends AbstractToken {
         if (this == other) return true;
         if (other == null || getClass() != other.getClass()) return false;
 
-        NumToken otherToken = (NumToken) other;
-        return this.val == otherToken.val;
+        NumNode otherNode = (NumNode) other;
+        return this.val == otherNode.val;
     }
 
     @Override
@@ -25,11 +24,7 @@ public class NumToken extends AbstractToken {
     }
 
     @Override
-    public String toString() {
-        return "NumToken(val='" + val + "')";
-    }
-
-    public int getVal() {
-        return val;
+    public String toFormattedString(int depth) {
+        return indent(depth) + "NumNode(val=" + val + ")";
     }
 }

@@ -32,4 +32,11 @@ public class IdToken extends AbstractToken {
         return Objects.hash(id, type);
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public IdTokenType getIdTokenType() {
+        return type;
+    }
 }
