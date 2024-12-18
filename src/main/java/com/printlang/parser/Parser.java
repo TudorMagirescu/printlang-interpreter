@@ -140,11 +140,11 @@ public class Parser {
         AbstractToken token = getNextToken();
 
         if (isNumToken(token)) {
-            return new AssignmentNode(lhs, parseNumNode());
+            return new AssignmentNode(lhs.getId(), parseNumNode());
         }
 
         if (isIdToken(token, IdTokenType.USER_DEFINED)) {
-            return new AssignmentNode(lhs, parseIdNode());
+            return new AssignmentNode(lhs.getId(), parseIdNode());
         }
 
         throw new ParserException("`=` token not followed by a number or identifier.");

@@ -31,7 +31,7 @@ public class ParserTest {
         AbstractNode expectedOutput =
                 new ScopeNode(List.of(
                         new AssignmentNode(
-                                new IdNode("x"),
+                                "x",
                                 new NumNode(1)
                         ),
                         new PrintNode(
@@ -39,7 +39,7 @@ public class ParserTest {
                         ),
                         new ScopeNode(List.of(
                                 new AssignmentNode(
-                                        new IdNode("x"),
+                                        "x",
                                         new NumNode(2)
                                 )
                         )),

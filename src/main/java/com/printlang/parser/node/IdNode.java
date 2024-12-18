@@ -27,4 +27,8 @@ public class IdNode extends ExprNode {
     public String toFormattedString(int depth) {
         return indent(depth) + "IdNode(id=" + id + ")";
     }
+
+    public String getId() {
+        return id;
+    }
 }

@@ -34,23 +34,19 @@ IdToken(id='x',type=USER_DEFINED)
 
 Parser output:
 ScopeNode
-	AssignmentNode
-		IdNode(id=x)
+	AssignmentNode(lhs=x)
 		NumNode(val=1)
 	PrintNode
 		IdNode(id=x)
 	ScopeNode
-		AssignmentNode
-			IdNode(id=x)
+		AssignmentNode(lhs=x)
 			NumNode(val=2)
 		PrintNode
 			IdNode(id=x)
 		ScopeNode
-			AssignmentNode
-				IdNode(id=x)
+			AssignmentNode(lhs=x)
 				NumNode(val=3)
-			AssignmentNode
-				IdNode(id=y)
+			AssignmentNode(lhs=y)
 				IdNode(id=x)
 			PrintNode
 				IdNode(id=x)

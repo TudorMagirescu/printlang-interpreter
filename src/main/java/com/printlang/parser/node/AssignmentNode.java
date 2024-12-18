@@ -3,10 +3,10 @@ package com.printlang.parser.node;
 import java.util.Objects;
 
 public class AssignmentNode extends AbstractNode {
-    private final IdNode lhs;
+    private final String lhs;
     private final ExprNode rhs;
 
-    public AssignmentNode(IdNode lhs, ExprNode rhs) {
+    public AssignmentNode(String lhs, ExprNode rhs) {
         this.lhs = lhs;
         this.rhs = rhs;
     }
@@ -29,8 +29,7 @@ public class AssignmentNode extends AbstractNode {
     @Override
     public String toFormattedString(int depth) {
         return indent(depth)
-                + "AssignmentNode\n"
-                + lhs.toFormattedString(depth + 1) + '\n'
+                + "AssignmentNode(lhs=" + lhs + ")\n"
                 + rhs.toFormattedString(depth + 1);
     }
 }
